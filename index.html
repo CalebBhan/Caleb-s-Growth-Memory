@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caleb's Growth Memory ❤️</title>
+<style>
+:root{
+    --primary:#2563eb;
+    --secondary:#ec4899;
+    --accent:#f59e0b;
+    --bg:#f7fafc;
+    --card:#ffffff;
+    --text:#334155;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+.hero{
+    height:80vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('./images/caleb-cover.jpeg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+.hero p{
+    font-size:1.2rem;
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:25px;
+}
+.letter{
+    background:white;
+    margin-top:-60px;
+    position:relative;
+    z-index:10;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.letter h2{
+    color:var(--secondary);
+    margin-bottom:15px;
+}
+.section-title{
+    text-align:center;
+    margin:50px 0 25px;
+    color:var(--primary);
+    font-size:2rem;
+}
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.timeline-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+.timeline-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    cursor:pointer;
+}
+.card-content{
+    padding:15px;
+}
+.card-content h3{
+    color:var(--secondary);
+}
+footer{
+    margin-top:50px;
+    background:linear-gradient(135deg,#2563eb,#ec4899);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.95);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+}
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+@media(max-width:768px){
+.hero h1{
+    font-size:2rem;
+}
+.hero p{
+    font-size:1rem;
+}
+.card img{
+    height:220px;
+}
+.letter{
+    margin-top:-30px;
+}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+<div>
+<h1>❤️ Caleb's Growth Memory ❤️</h1>
+<p>Born July 15, 2026 • A collection of memories, milestones, and adventures</p>
+</div>
+</section>
+<div class="container">
+<img src="images/caleb-cover.jpeg" style="width:100%;max-width:400px;">
+<div class="letter">
+<h2>💙 A Letter to Caleb</h2>
+<p>
+Caleb,
+You entered our lives on July 15, 2026, and from that moment everything changed for the better.
+This website was created to preserve your story. Every smile, every milestone, every family vacation, every birthday, and every special moment will have a place here.
+As you grow older, we hope these memories remind you of how deeply you have always been loved.
+Love,
+Dad & Mom❤️
+</p>
+</div>
+<h2 class="section-title">🌟 Caleb's Milestones</h2>
+<div class="timeline">
+<div class="timeline-card">
+<h3>👶 July 15, 2026</h3>
+<p>Welcome to the world, Caleb.</p>
+</div>
+<div class="timeline-card">
+<h3>🍼 First Smile</h3>
+<p>Your first smile melted our hearts.</p>
+</div>
+<div class="timeline-card">
+<h3>👣 First Steps</h3>
+<p>A moment we will never forget.</p>
+</div>
+<div class="timeline-card">
+<h3>🎂 First Birthday</h3>
+<p>One amazing year of memories.</p>
+</div>
+<div class="timeline-card">
+<h3>🏫 First Day of School</h3>
+<p>A big step toward your future.</p>
+</div>
+<div class="timeline-card">
+<h3>⭐ Future Adventures</h3>
+<p>Your story is only beginning.</p>
+</div>
+</div>
+<h2 class="section-title">📸 Memory Gallery</h2>
+<div class="gallery">
+<div class="card">
+<img src="images/baby.jpg" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>👶 Baby Days</h3>
+<p>The beginning of Caleb's journey.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/family.jpg" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>❤️ Family Time</h3>
+<p>Surrounded by the people who love you most.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/birthday.jpg" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>🎂 Birthday Memories</h3>
+<p>Celebrating another wonderful year.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/holiday.jpg" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>🎄 Holidays</h3>
+<p>Special traditions and family moments.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/adventure.jpg" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>🌎 Adventures</h3>
+<p>Exploring the world together.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/favorite.jpg" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>⭐ Favorite Memory</h3>
+<p>Add your most treasured moment here.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="lightbox" class="lightbox">
+<span class="close" onclick="closeImage()">&times;</span>
+<img id="lightbox-img">
+</div>
+<footer>
+<h2>❤️ Caleb's Growth Memory ❤️</h2>
+<p>Born July 15, 2026</p>
+<p>Made with love by Dad</p>
+</footer>
+<script>
+function openImage(src){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+function closeImage(){
+    document.getElementById("lightbox").style.display = "none";
+}
+document.getElementById("lightbox").addEventListener("click", function(e){
+    if(e.target === this){
+        closeImage();
+    }
+});
+</script>
+</body>
+</html>
